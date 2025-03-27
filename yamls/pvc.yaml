@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: my-azurefile-pvc
+  namespace: demo-aks-stogare
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: my-azurefile-sc
+  resources:
+    requests:
+      storage: 5Gi
